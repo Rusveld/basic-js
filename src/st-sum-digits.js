@@ -13,5 +13,15 @@ import { NotImplementedError } from '../extensions/index.js';
  *
  */
 export default function getSumOfDigits(n) {
-    throw new NotImplementedError('Not implemented');
+    let counter = 0;
+    n = (String(n).split("").forEach((el) => counter += Number.parseInt(el)))
+ 
+    let elenent = counter
+    if(String(elenent).length>1){
+      
+      return getSumOfDigits(elenent)
+    }
+    return counter
 }
+
+
